@@ -1,0 +1,2 @@
+# Fiddler2LRScript
+采用Python开发，实现了Fiddler抓包文件（saz）转换为LoadRunner脚本的功能，弥补了LoadRunner有时因环境问题而无法录制脚本的缺陷。
