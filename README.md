@@ -6,10 +6,7 @@
 
 ![](images/IE_error.png)
 
-对于B/S架构系统的性能测试，录制脚本是第一步，若脚本无法录制，则无法开展后续的工作。
-
-![](images/lr_test_step_error.png)
-
+对于B/S架构系统的性能测试，录制脚本是第一步，若脚本无法录制，则无法开展后续的测试工作。
 
 ## 解决思路
 
@@ -34,10 +31,8 @@
 在SAZ文档中，包含有两个文件（_index.htm和[Content_Types].xml）和一个文件夹（raw）；在raw文件夹中包含了存储所有web session的文件。
 针对每一个web session，存在3个文件，sessid#_c.txt，sessid#_s.txt和sessid#_m.xml。其中sessid#_c.txt包含了客户端的原始请求；例如，对于前面提到的同一个POST请求，对应的文件内容如下图所示：
 
-![](images/saz_zip.png)
-![](images/saz_zip_1.png)
-![](images/saz_zip_2.png)
-![](images/saz_zip_client.png)
+![](images/saz_zip_raw.png)
+![](images/saz_zip_client_content.png)
 
 我们可以根据其中的内容来构造HTTP请求，参照web_custom_request的函数说明，将其转换成为web_custom_request函数，最终形成LoadRunner测试脚本。
 
